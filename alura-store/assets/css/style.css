@@ -1,0 +1,38 @@
+/*El CSS grid layout es una un método muy fácil, mucho más amigable para configurar nuestras páginas actualmente.*/
+
+/*Como podemos ver a continuacion tenemos colocadas las tres principales clases (además del body) con las que vamos a trabajar, son las partes de la template inicial (como se divide nuestro sitio), y están aquí: encabezado, contenido y rodapié. Para esto tenemos una estructura principal que es nuestra estructura body, la cual para poder definir o trabajar con ella al estilo de grid, tenemos que indicar a esta estructura que se comporte como un grid.*/
+
+.app {
+    background: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid; /*proporciona una cuadrícula de una sola columna, por lo que tus elementos continúan mostrándose uno debajo del otro, como lo hacen en el flujo normal. A diferencia de Flexbox (el orden de los flex items es automatico), para ver algo que se parezca más a una cuadrícula, necesitamos añadir columnas a la cuadrícula.*/
+
+    /*Para comenzar a ver cambios en nuestro sitio es necesario definir nuestras areas de trabajo, es decir, para grid css layout nosotros precisamos definir primeramente las templates, las columnas y las líneas. Esto lo conseguimos aplicando la propiedad; */
+    grid-template-areas:
+    "encabezado"
+    "contenido"
+    "rodapie"; /*a traves de string definimos las areas y las estructuras principales que vamos a utilizar. Siempre debemos definir las áreas en el orden en que deben colocarse en la página.*/
+
+    /*Ahora necesitamos definir como van a ser las columnas y las lineas, esto lo conseguimos aplicando la propiedad; */
+    grid-template-columns: auto; /*estamos creando una columna donde su tamaño sera automatico segun el contenido que se inserte (tambien podemos utilizar otras unidades de medidas)*/
+    grid-template-rows: 50px 100vh auto; /*estamos creando tres lineas donde el tamaño de las mismas sera; 50 px primera linea, la segunda va a ocupar el tamaño completo de la pantalla y tercer linea va a ser automatica, es decir, que van a ocupar el espacio restante de la pantalla.*/
+}
+
+/*Una vez definidas las template-areas, resta definir cual es cual, esto lo hacemos a continuacion: */
+
+.encabezado {
+    background: #00cc99;
+    grid-area: encabezado;
+    
+}
+.contenido {
+    background: #ff8080;
+    grid-area: contenido;
+
+}
+
+.rodapie { 
+    background: #0099ff;
+    grid-area: rodapie;
+    
+}
