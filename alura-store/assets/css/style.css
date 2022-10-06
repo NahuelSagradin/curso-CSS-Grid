@@ -21,18 +21,15 @@
 /*Una vez definidas las template-areas, resta definir cual es cual, esto lo hacemos a continuacion: */
 
 .encabezado {
-    background: #00cc99;
     grid-area: encabezado;
     
 }
 .contenido {
-    background: #ff8080;
     grid-area: contenido;
 
 }
 
-.rodapie { 
-    background: #0099ff;
+.rodapie {
     grid-area: rodapie;
     
 }

@@ -1,0 +1,13 @@
+/*Para crear nuestra seccion de destacados similar a la que tenemos como ejemplo en el archivo prototipo.pdf, primeramente tenemos que definirlo como grid y vamos a definir también cuántas columnas y cuantas filas tiene. */
+
+.destaques {
+
+    display: grid;
+    /*necesito definir 4 columnas y que todas tengan las mismas proporciones; */
+    grid-template-columns: 25% 25% 25% 25%;
+    /*lo mismo ocurre con las filas; */
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    /*Ahora bien, yo necesito que mi seccion de destaque ocupe el 100% de la pantalla. Ya habíamos definido el header con 50 pixeles, la parte de sección de contenidos era el 100% de mi pantalla, y el rodapié que estaba en modo automático, entonces ahora yo quiero que la parte destacada me cubra el 100% de la pantalla, esto lo consigo aplicando la propiedad; */
+    height: calc(100vh - 50px); /*en este caso vamos a colocar una altura a la sección de destaque que calcule el 100% de la pantalla, de nuestro navegador teniendo en cuenta que la misma debe comenzar a partir de de la altura asignada a nuestro encabezado.*/
+
+}
