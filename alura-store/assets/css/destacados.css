@@ -95,5 +95,21 @@ Para comenzar a definir nuestra imagen pricipal, debemos identificar su clase co
     color: inherit;
 }
 
+/*Para que nuestra seccion de destaques quede identica a nuestro prototipo falta agregarle un background a los titulos de nuestros aplicativos, los textos deben estar centrados en la parte de abajo con la fuente de color blanco: */
+.destaques__titulo {
+    color: #fdfdfd;
+    background: rgb(0, 0, 0, 0.5); /*cuando quiero trabajar con opacidad, me conviene utilizar el formato 'rgb' para el color en el cual a traves del cuarto parametro puedo controlar dicha funcion.*/
+    width: 100%;
+    text-align: center;
+    padding: .6rem;/*espaciamiento interno*/
+}
+
+/*solo nos falta ubicar nuestro titulo en la parte inferior de nuestro elemento, ahora bien, */
+.box {
+    display: flex; /*para cambiar la ubicacion de los elementos dentro de mi contenedor padre, es necesario aplicar esta propiedad.*/
+    align-items: flex-end; /*ahora con esta propiedad los puedo ubicar tanto en la parte de arriba (padron) como en la parte de abajo*/
+    justify-content: center; /*defino cómo el navegador va distribuir el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
+}
+
 
 
