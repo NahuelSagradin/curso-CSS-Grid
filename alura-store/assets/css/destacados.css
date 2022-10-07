@@ -1,3 +1,5 @@
+/*Configuración y posicionamiento de los elementos de nuestra area de destaques: */
+
 /*Para crear nuestra seccion de destacados similar a la que tenemos como ejemplo en el archivo prototipo.pdf, primeramente tenemos que definirlo como grid y vamos a definir también cuántas columnas y cuantas filas tiene. */
 
 .destaques {
@@ -60,3 +62,38 @@ Para comenzar a definir nuestra imagen pricipal, debemos identificar su clase co
     grid-column: 3 / 4;
     grid-row: 3 /4;
 }
+
+/*Configuracion de la seccion de categorias dentro de destaques: */
+
+/*nos piden que dividamos en cuatro elementos los elementos (items) de mi seccion categoria, es decir, dos columnas y dos filas con uno de esos elementos en cada una de esas secciones, para ello es necesario primero definir el espacio que tenemos para trabajar: */
+.destaques__categorias {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4; 
+    /*con esto le estamos indicando a nuestra seccion de categorias como debe comportarse, la misma tiene que ocupar las dos primeras columnas de nuestra tercer fila.*/
+}
+
+/*ahora tenemos que posicionar los elementos de nuestra lista como mensionamos un poco más arriba: */
+.destaques__categorias___lista {
+    display: flex; /*esta propiedad me permite cambiar la forma que tengo de posicionar los elementos de mi lista*/
+    flex-wrap: wrap; /*con esta propiedad le indico a mi elemento contenedor que este en algun punto que todavia no defini, se tiene que quebrar y pasar a la columna contigua.*/
+    height: 100%;
+    justify-content: space-between;
+}
+
+/*ahora tenemos que trabajar sobre los items de nuestra lista*/
+.destaques__categorias___item {
+    align-items: center; /*con esta propiedad puedo alinear al centro nuestros items.*/
+    background: #fdfdfd; /*cambiamos el color de fondo de nuestro contenedor de items*/
+    display: flex; /*como yo quiero que mis elementos se ubiquen en el centro de mi contenedor, tengo que cambiar la forma original en la que se comportan mis elementos.*/
+    color: #333333; /*modifico el color de nuestro texto*/
+    width: 50%; /*al elemento padre le dimos un width de 100%, por lo que los cuatro elementos ocuparon todo el ancho de su contenedor padre, ahora le estos asignando a cada elemento un ancho del 50% ese contenedor y como lo definimos con flex-wrap estos se quiebran para ubicarse en la posicion contigua siguiente. */
+    padding: 1rem; /*le asigno un margen interno a nuestros elementos*/
+}
+
+/*en un principio no se aplico la modificacion del color de la fuente, esto se debe a que tenemos que indicarle a que el color va ser inherente al que estoy colocando en los links.*/
+.destaques__categorias___link {
+    color: inherit;
+}
+
+
+
