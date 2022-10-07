@@ -11,6 +11,7 @@
     grid-template-rows: 33.33% 33.33% 33.33%;
     /*Ahora bien, yo necesito que mi seccion de destaque ocupe el 100% de la pantalla. Ya habíamos definido el header con 50 pixeles, la parte de sección de contenidos era el 100% de mi pantalla, y el rodapié que estaba en modo automático, entonces ahora yo quiero que la parte destacada me cubra el 100% de la pantalla, esto lo consigo aplicando la propiedad; */
     height: calc(100vh - 50px); /*en este caso vamos a colocar una altura a la sección de destaque que calcule el 100% de la pantalla, de nuestro navegador teniendo en cuenta que la misma debe comenzar a partir de de la altura asignada a nuestro encabezado.*/
+    gap: .2rem; /*al utilizar la propiedad gap y darle un valor con cualquier unidad de medida CSS, estamos diciéndole al navegador que separe tanto las columnas como las filas de la cuadrícula CSS con ese tamaño*/
 
 }
 
@@ -110,6 +111,8 @@ Para comenzar a definir nuestra imagen pricipal, debemos identificar su clase co
     align-items: flex-end; /*ahora con esta propiedad los puedo ubicar tanto en la parte de arriba (padron) como en la parte de abajo*/
     justify-content: center; /*defino cómo el navegador va distribuir el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor*/
 }
+
+/*solo nos resta agregar un espacio pequeño entre los destaques, para conseguir esto, tenemos que volver al contenedor en donde definimos nuestras filas y columnas para aplicar la propiedad 'gap'.*/
 
 
 
