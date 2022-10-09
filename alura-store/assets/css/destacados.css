@@ -1,6 +1,6 @@
 /*Configuración y posicionamiento de los elementos de nuestra area de destaques: */
 
-/*Para crear nuestra seccion de destacados similar a la que tenemos como ejemplo en el archivo prototipo.pdf, primeramente tenemos que definirlo como grid y vamos a definir también cuántas columnas y cuantas filas tiene. */
+/*Para crear nuestra seccion de destacados similar a la que tenemos como ejemplo en el archivo prototipo.pdf, primeramente tenemos que definirla como grid y vamos a definir también cuántas columnas y cuantas filas tiene. */
 
 .destaques {
 
@@ -17,16 +17,17 @@
 
 /*Ahora hay que colocar y posicionar nuestros elementos para que se aproxime lo más posible a nuestro prototipo. 
 
-Si revisamos nuestro HTML, en nuestra seccion de destaque en donde cada imagen esta definida por una seccion principal y unas secciones secundarias, con areas 1, 2, 3 , 4 y luego la seccion de categorías.
+Si revisamos nuestro HTML, nuestra seccion de destaque cada imagen esta definida por una seccion principal y unas secciones secundarias, con areas 1, 2, 3 , 4 y luego la seccion de categorías.
 
 Para comenzar a definir nuestra imagen pricipal, debemos identificar su clase correspondiente a la cual le vamos aplicar las propiedades grid. */
 
 .destaques__principal {
-    /*nuestra imagen principal debe ocupar tres columnas  y dos filas, esto se consigue aplicando la propiedad; */
+    /*nuestra imagen principal debe ocupar tres columnas  y dos filas, esto se consigue aplicando las propiedades; */
     background: url('../img/fortnite.jpg'); /*esta propiedad me permite agregar una imagen como fondo de mi elemento*/
     background-size: cover; /*con esta propiedad puedo hacer que mi imagen de background ocupe todo el espacio que le corresponde*/
     background-position: center; /*me permite centrar mi imagen de background*/
     background-repeat: no-repeat; /*en los casos en los que el tamaño de la imagen sea menor a la del contenedor esta comenzara a repetirse, esto lo podemos evitar aplicando esta propiedad.*/
+
     /*es necesario definir la cantidad de columnas que queremos que nuestro contenedor ocupe; */
     grid-column-start: 1;/*me permite definir en que columna comienza dicho contenedor.*/
     grid-column-end: 4; /*me permite definir en que columna va terminar.*/
@@ -37,7 +38,7 @@ Para comenzar a definir nuestra imagen pricipal, debemos identificar su clase co
 
 }
 
-/*Ahora nos encontramos con una dificultad, tenemos varias imagenes bajo una misma clase, una primera opcion para resolver esto es renombrar las clases, lo cual ademas de ser tedioso aumenta el volumen de nuestro codigo, otra opcion es utilizar la propiedad 'nth-child()' para identificarlas segun su indice; */
+/*Ahora nos encontramos con una dificultad, tenemos varias imagenes bajo una misma clase, una primera opcion para resolver esto es renombrar las clases, lo cual ademas de ser tediosa aumenta el volumen de nuestro codigo, otra opcion es utilizar la propiedad 'nth-child()' para identificarlas segun su indice; */
 .destaques__secundario:nth-child(2) {
     /*Para evitar repetir mucho código y con la intención de intentar reducir la cantidad de líneas de código convirtiéndolas en atajos o reduciendo el código en una o dos líneas se recomienda utilizar buenas practicas como las que vamos a ver a continuacion, en solo tres lineas resolvimos lo que antes nos demando 8; */
     background: url('../img/pubg.jpg') center /cover no-repeat;

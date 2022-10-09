@@ -3,3 +3,52 @@
 .populares {
     padding: 3rem 0;
 }
+
+.populares__card {
+    background:#fdfdfd;
+    /*necesitamos que nuestro contenedor se comporte como una grid, esto lo conseguimos aplicando la propiedad; */
+    display: grid; /*proporciona una cuadrícula de una sola columna, por lo que tus elementos continúan mostrándose uno debajo del otro, como lo hacen en el flujo normal. A diferencia de Flexbox (el orden de los flex items es automatico), para ver algo que se parezca más a una cuadrícula, necesitamos añadir columnas a la cuadrícula.*/
+
+    /*ahora definimos dos areas; una para la imagen y otra para el contenido; */
+    grid-template-areas: 
+    "card-imagen"
+    "card-base"; /*esta propiedad me permite especificar las ubicaciones dentro de la grid que van a tener nuestras areas, dicha accion me va a permitir poder distribuir (ordenar) las posiciones dentro de la misma, podemos utilizar el nombre de nuestros elementos o en tal caso el de la clase que les otorgamos. De este modo podemos comprender exactamente que representa cada area, su ubicacion exacta dentro de nuestra grid. Entonces luego de nombrar dentro de nuestro CSS las areas que representan a cada uno de nuestos elementos del index, dentro de nuestro grid container podemos asignar las posiciones.*/
+    grid-template-columns: 100%; /*definimos el ancho de nuestra columna*/
+    grid-template-rows: 173px auto;
+    margin-right: 1rem;
+    width: calc(20% - 1rem);
+}
+
+.populares__card___imagen {
+    grid-area: card-imagen; /*esta propiedad me permite definir mi elemento (grid-item) como una grid-area para luego a traves de la misma poder posicionarla dentro del grid container. */
+    height: 100%; /*defino el alto de mi area*/
+    width: 100%; /*defino el ancho de mi area*/
+}
+
+/*hacemos lo mismo con los demas elementos la seccion populares; */
+.populares__card___base {
+    /*definimos la grid que va contener nuestro contenido con su correspondiente titulo: */
+    grid-area: card-base; /*defino mi elemento como un grid-area. */
+    /*esta area tambien va a funcionar como una grid, es por ello que es necesario aplicar la propiedad; */
+    display: grid;
+    grid-row-gap: .5rem; /*me permite difinir un espaciamiento entre cada grid*/
+    grid-template-rows:
+    "card-header"
+    "card-descripcion"; /*me permite definir el orden en el que queremos ubicar nuestros grid-items. */
+    grid-template-rows: 50px auto; /*me permite definir las dimensiones de las filas, la primera va tener un */
+    padding: .75rem;
+}
+
+.populares__card___descripcion {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: card-descripcion;
+    padding: 1rem 0rem;
+}
+
+.populares__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: contenido;
+    padding: 1rem 0rem;
+}
