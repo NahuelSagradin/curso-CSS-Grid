@@ -21,9 +21,24 @@
 /*Una vez definidas las template-areas, resta definir cual es cual, esto lo hacemos a continuacion: */
 
 .encabezado {
-    grid-area: encabezado;
-    
+    /*modifico style de mi menu (encabezado)*/
+    grid-area: encabezado; /*lo posiciono en primer lugar con mi grid-area*/
+    align-items: center; /*sirve para "empaquetar líneas flexibles"; Controla el espacio entre las líneas de flexión en el eje transversal.*/
+    display: flex; /*me permite ubicar mis flex-item uno al lado del otro*/
+    padding: 0 2rem; /*genero un espacio interno entre mi flex-container y mis flex-items*/
 }
+
+.menu__link {
+    color: #333333; /*modifico el color de mis flex-item*/
+    padding: .5rem 1rem; /*modifico el espacio entre mis flex-item*/
+
+}
+
+.menu__link:hover, .menu__link:active {
+    border-bottom: 2px solid #0073E6; /*gracias a la propiedad 'hover' puedo agregar un borde inferior a mis flex-items cuando paso el cursor por encima, al mismo tiempo que defino el tipo y el color del mismo*/
+}
+
+
 .contenido {
     grid-area: contenido;
 
