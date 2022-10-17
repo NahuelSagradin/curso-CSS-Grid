@@ -1,4 +1,6 @@
-/*En esta parte vamos a trabajar con la seccion de populares en nuestra pagina!!*/
+/*En esta parte vamos a trabajar la sección de populares que se encuentra debajo de la parte destacados. Esta se encuentra dividida en cinco columnas y en cuatro secciones: aplicaciones populares, juegos populares, en destaques y novedades, cada una tiene su imagen, tiene su título, la fecha de lanzamiento y una descripción breve de lo que sería la aplicación o el juego por tal motivo sera necesario trabajar una grid dentro de otra grid. */
+
+/*En primer lugar tenemos que enlazar nuestro archivo CSS con el HTML para poder apreciar los style que apliquemos a continuacion. */
 
 .populares {
     padding: 3rem 0;
