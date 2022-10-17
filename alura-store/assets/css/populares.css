@@ -86,12 +86,13 @@
 }
 
 .populares__boton {
+    /*trabajo en el stylo de mis botones para filtrar info:*/
     background: transparent;
     border: none;
     color: #333333;
 }
 
 .populares__card:last-child {
-    margin-right: 0;
+    margin-right: 0; /*quito el margen derecho definido de forma general para mi ultima columna*/
 }
 
