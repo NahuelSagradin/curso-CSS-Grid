@@ -34,7 +34,7 @@
     /*esta area tambien va a funcionar como una grid, es por ello que es necesario aplicar la propiedad; */
     display: grid;
     grid-row-gap: .5rem; /*me permite difinir un espaciamiento entre cada grid*/
-    grid-template-rows:
+    grid-template-areas:
     "card-header"
     "card-descripcion"; /*me permite definir el orden en el que queremos ubicar nuestros grid-items. */
     grid-template-rows: 50px auto; /*me permite definir las dimensiones de las filas, la primera va tener un */
@@ -53,4 +53,23 @@
     flex-wrap: wrap;
     grid-area: contenido;
     padding: 1rem 0rem;
+}
+
+.populares__card___titulo {
+    /*modifico color del titulo correspondiente a la clase al igual que el tamaño de la fuente:*/
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+.populares__card___data {
+    /*modifico color y tamaño de fuente de la clase correspondiente.*/
+    color: #808080;
+    font-size: .9rem;
+}
+
+.populares__card___descripcion {
+    color: #333333;
+    line-height: 1.5; /*aumento el tamaño del interlineado de texto (espacio entre lineas)*/
+    margin: 1rem 0;
+    text-align: justify; /*La propiedad text-align define cuatro valores para alinear los contenidos; a la izquierda ( left ), a la derecha ( right ), centrados ( center ) o justificados ( justify ).*/
 }
