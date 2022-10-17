@@ -3,7 +3,8 @@
 /*En primer lugar tenemos que enlazar nuestro archivo CSS con el HTML para poder apreciar los style que apliquemos a continuacion. */
 
 .populares {
-    padding: 3rem 0;
+    padding: 3rem 2rem;
+
 }
 
 .populares__card {
@@ -53,12 +54,14 @@
     flex-wrap: wrap;
     grid-area: contenido;
     padding: 1rem 0rem;
+    border-top: 1px solid #dcdcdc;
+    
 }
 
 .populares__card___titulo {
     /*modifico color del titulo correspondiente a la clase al igual que el tamaño de la fuente:*/
     color: #333333;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .populares__card___data {
@@ -73,3 +76,22 @@
     margin: 1rem 0;
     text-align: justify; /*La propiedad text-align define cuatro valores para alinear los contenidos; a la izquierda ( left ), a la derecha ( right ), centrados ( center ) o justificados ( justify ).*/
 }
+
+.populares__titulo {
+    font-weight: 500; /*La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold .*/
+}
+
+.populares__icon {
+    margin-right: .25rem;
+}
+
+.populares__boton {
+    background: transparent;
+    border: none;
+    color: #333333;
+}
+
+.populares__card:last-child {
+    margin-right: 0;
+}
+
