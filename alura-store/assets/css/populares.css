@@ -77,6 +77,12 @@
     text-align: justify; /*La propiedad text-align define cuatro valores para alinear los contenidos; a la izquierda ( left ), a la derecha ( right ), centrados ( center ) o justificados ( justify ).*/
 }
 
+.populares__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
 .populares__titulo {
     font-weight: 500; /*La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold .*/
 }

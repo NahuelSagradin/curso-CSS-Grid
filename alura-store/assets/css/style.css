@@ -15,7 +15,7 @@
 
     /*Ahora necesitamos definir como van a ser las columnas y las lineas, esto lo conseguimos aplicando la propiedad; */
     grid-template-columns: auto; /*estamos creando una columna donde su tamaño sera automatico segun el contenido que se inserte (tambien podemos utilizar otras unidades de medidas)*/
-    grid-template-rows: 50px 100vh auto; /*estamos creando tres lineas donde el tamaño de las mismas sera; 50 px primera linea, la segunda va a ocupar el tamaño completo de la pantalla y tercer linea va a ser automatica, es decir, que van a ocupar el espacio restante de la pantalla.*/
+    grid-template-rows: 50px auto auto; /*estamos creando tres lineas donde el tamaño de las mismas sera; 50 px primera linea, la segunda va a ocupar el tamaño completo de la pantalla y tercer linea va a ser automatica, es decir, que van a ocupar el espacio restante de la pantalla.*/
 }
 
 /*Una vez definidas las template-areas, resta definir cual es cual, esto lo hacemos a continuacion: */
@@ -41,10 +41,15 @@
 
 .contenido {
     grid-area: contenido;
+    padding: 0 2rem;
 
 }
 
 .rodapie {
     grid-area: rodapie;
+    background: #FDFDFD;
+    color: #333333;
+    padding: 1rem;
+    text-align: center;
     
 }
